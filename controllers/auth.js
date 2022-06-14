@@ -43,9 +43,24 @@ const login = async( req, res = response ) => {
             msg: 'Hable con el administrador uwu'
         })
     }
+}
 
+const renewToken = async (req, res = response) => {
+
+    const uid = req.uid;
+
+    // Generar el TOKEN - JWT 
+    const token = await generarJWT( uid ); // ---Devuelve una promesa
+
+
+
+    res.json({
+        ok:true,
+        token
+    })
 }
 
 module.exports = {
-    login
+    login,
+    renewToken
 }
