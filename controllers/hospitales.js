@@ -74,10 +74,6 @@ const actualizarHospital = async ( req, res = response ) => {
         })
     }
     
-    res.json({
-        ok: true,
-        msg: 'actualizarHospital'
-    })
 }
 
 const borrarHospital = async ( req, res = response) => {
@@ -109,10 +105,6 @@ const borrarHospital = async ( req, res = response) => {
         })
     }
     
-    res.json({
-        ok: true,
-        msg: 'borrarHospital'
-    })
 }
 
 
